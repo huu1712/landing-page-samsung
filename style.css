@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: iCiel;
+    src: url(font/iCiel-SamsungSharpSans-Bold_SMCPS.ttf);
+}
+
+:root{
+    --main-color: #b89fff;
+}
+
+html{
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: iCiel;
+    background-color: #ecebeb;
+}
+
+.banner-mobile{
+    display: none;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.countdown{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.countdown h1{
+    margin-bottom: 2rem;
+}
+
+.time-countdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.time-countdown .time{
+    display: flex;
+    flex-direction: column;
+}
+
+.time-countdown .number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.time-countdown .number p{
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    font-size: 3rem;
+    background-color: #fff;
+    margin-bottom: .5rem;
+}
+
+.time-countdown .number ~ span{
+    font-size: 1.5rem;
+}
+
+.calendar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.calendar div{
+    padding: 5px 15px;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%),
+    0 2px 6px 2px rgb(60 64 67 / 15%);
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.calendar div span{
+    font-size: 1.7rem;
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center
+}
+
+.timeline-content p{
+    font-size: 1.2rem;
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    border: 3px solid #fff;
+    position: relative;
+}
+
+.timeline-steps .timeline-step:not(:last-child) .timeline-content .inner-circle:after{
+    content: "";
+    display: block;
+    background-color: var(--main-color);
+    width: 11rem;
+    height: 2px;
+    position: absolute;
+    left: 1.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.introduce{
+    background-color: #292c31;
+    padding: 2rem 12rem;
+}
+
+.introduce-content{
+    background: linear-gradient(90deg, #cba4e7, #8571b2);
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.samsung{
+    align-items: center;
+}
+
+.z-flip .samsung-col_one{
+    position: relative;
+    text-align: center;
+}
+
+.z-flip .samsung-col_one img{
+    width: 13.5rem;
+}
+
+.button {
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #000;
+    padding: .4rem 1.2rem;
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    position: absolute;
+    bottom: -1.5rem;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.z-flip .samsung-col_two p{
+    font-size: 1.7rem;
+    letter-spacing: 0.08rem;
+    text-align: center;
+}
+
+.z-flip .samsung-col_two p span{
+    color: #fff;
+}
+
+.z-flip .samsung-col_two img{
+    width: 100%;
+}
+
+.z-flip.row-2{
+    flex-direction: row-reverse;
+    margin-top: 4rem;
+}
+
+.z-fold{
+    margin: 4rem 0;
+}
+
+.accessory{
+    padding: 2rem 12rem;
+}
+
+.accessory-bonus{
+    margin-top: 4rem;
+    padding: 4rem 4rem 2rem;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+    border-radius: 1.5rem;
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+}
+
+.accessory-bonus h1{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%,-50%);
+    border: 4px solid #fff;
+    border-radius: 3rem;
+    padding: 0.4rem 3rem 0.2rem;
+    background: linear-gradient(180deg, #8e67db, #d28ff4);
+    box-shadow: 0 0 4px 2px #d28ff4, inset 0 0 10px #fff;
+    color: #fff;
+}
+
+.accessory-bonus img{
+    width: 15rem;
+}
+
+.accessory-product_img{
+    margin-bottom: 2rem;
+}
+
+.accessory-more{
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #000;
+    padding: .4rem 1.2rem;
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+}
+
+.promotion{
+    padding: 2rem 12rem;
+}
+
+.promotion-img{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+}
+
+.promotion-img img{
+    width: 100%;
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    .introduce, .accessory, .promotion {
+        padding: 2rem;
+    }
+
+    .samsung-col_one{
+        margin-bottom: 3rem;
+    }
+
+    .accessory-bonus h1 {
+        font-size: 1.8rem;
+    }
+
+    .accessory-bonus h1 ~ img{
+        margin-bottom: 1rem;}
+}
+
+
+@media only screen and (max-width: 46.188em) {
+
+    html {
+        font-size: 10px;
+    }
+
+    .banner-desktop {
+        display: none;
+    }
+
+    .banner-mobile {
+        display: block;
+    }
+
+    .countdown-img iframe {
+        width: 100%;
+    }
+
+
+
+    .introduce, .accessory, .promotion {
+        padding: 2rem;
+    }
+
+    .samsung-col_one {
+        margin-bottom: 4rem;
+    }
+
+    .accessory-bonus h1 {
+        font-size: 1.8rem;
+        padding: 1rem 1.2rem 0.8rem;
+    }
+
+    .accessory-product {
+        margin-top: 1rem;
+    }
+
+    .accessory-bonus .accessory-product_img img {
+        width: 100%;
+    }
+
+    .accessory-more {
+        font-size: 1.5rem;
+        padding: 0.6rem 1.5rem 0.3rem;
+    }
+}
+
