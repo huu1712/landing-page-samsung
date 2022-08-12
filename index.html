@@ -11,7 +11,7 @@
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Sự kiện Samgsung Galaxy</title>
 </head>
 <body>
 
@@ -32,24 +32,24 @@
         <div class="time-countdown">
             <div class="dates time">
                 <div class="number">
-                    <p>0</p>
-                    <p>0</p>
-                </div>
-                <span>Ngày</span>
-            </div>
-            <div class="hours time">
-                <div class="number">
-                    <p>0</p>
-                    <p>0</p>
+                    <p id="hours"></p>
+
                 </div>
                 <span>Giờ</span>
             </div>
-            <div class="mins time">
+            <div class="hours time">
                 <div class="number">
-                    <p>0</p>
-                    <p>0</p>
+                    <p id="mins"></p>
+
                 </div>
                 <span>Phút</span>
+            </div>
+            <div class="mins time">
+                <div class="number">
+                    <p id="secs"></p>
+
+                </div>
+                <span>Giây</span>
             </div>
         </div>
         <div class="countdown-img">
@@ -213,6 +213,19 @@
             }
         }
     });
+
+
+    var myFunction = setInterval(function(){
+        var t = new Date();
+        var j = 23 - t.getHours();
+        var q = 59 - t.getMinutes();
+        var k = 59 - t.getSeconds();
+
+        document.getElementById("hours").innerHTML = j
+        document.getElementById("mins").innerHTML = q
+        document.getElementById("secs").innerHTML = k
+    },1000)
+
 </script>
 </body>
 </html>
